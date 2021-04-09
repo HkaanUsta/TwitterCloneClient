@@ -1,0 +1,578 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  
+  body {
+    line-height: 1;
+    background: black !important;
+    color: #fff !important;
+  }
+  
+  ol, ul {
+    list-style: none;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  blockquote, q {
+    quotes: none;
+  }
+  
+  blockquote:before, blockquote:after {
+    content: '';
+    content: none;
+  }
+  
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  html, body, .container, .h-100, .col-md-3, .col-md-6 {
+    height: 100%;
+    font-family: 'Kumbh Sans', sans-serif !important;
+  }
+  
+  .w-100 {
+    width: 100%;
+  }
+
+  :focus {
+    outline: 0;
+  }
+  
+  
+a {
+    text-decoration: none;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1rem;
+  }
+  
+  h4 {
+    font-size: 0.5rem;
+  }
+  #select-image {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+  }
+  
+  .row {
+    margin: 0;
+    padding: 0;
+  }
+
+  .btn-primary {
+    background: #1DA1F2 !important;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    transition: 200ms all;
+    background: rgb(26, 145, 218) !important;
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    border: 1px solid #1DA1F2;
+    color:#1DA1F2;
+  }
+  
+  .btn-secondary:hover {
+    transition: 200ms all;
+    background-color: rgb(29, 161, 242, 0.1);
+    border: 1px solid #1DA1F2;
+    color:#1DA1F2;
+  }
+  
+  :focus {
+    outline: 0;
+  }
+
+  .header {
+    background: black;
+    position: relative;
+  }
+  
+  .header-logo, .header-tweet, .header-profile {
+    padding: 20px;
+  }
+
+  .header-logo a svg {
+    height: 25px;
+    width: 25px;
+    color: #ddd;
+  }
+
+  .header-list {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .header-list > ul {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header-list li:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  .header-list a svg {
+    height: 25px;
+    width: 25px;
+    color: #ddd;
+    margin-right: 15px;
+  }
+
+  .header-list a {
+    display: flex;
+    align-items: center;
+    width: min-content;
+  }
+
+  .header-list a h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ddd;
+  }
+
+  .header-list ul li a:hover svg, .header-list ul li a:hover h3 {
+    transition: 200ms all;
+    color: #1DA1F2 !important;
+  }
+
+  .header-tweet button {
+    padding: 10px;
+    width: 80%;
+    border-radius: 13px;
+  }
+
+  .header-profile {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+  }
+
+  .header-profile div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main {
+    background: black;
+    border-left: 1px solid #2F3336;
+    border-right: 1px solid #2F3336;
+  }
+
+  /*Home-kaan*/
+
+.home-setting {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: #2F3336 1px solid;
+  border-top: #2F3336 1px solid;
+  padding: 15px;
+}
+.tweeting-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 20px;
+}
+.home-setting svg{
+  color: #1A91DA;
+}
+.tweeting-top img {
+  width: 50px;
+  height: 50px;
+  border-radius: 13px;
+}
+.tweeting-top input {
+  border: none;
+  background: transparent;
+  height: 30px;
+  width: 100%;
+  color: #1A91DA;
+  font-size: 18px;
+}
+.tweeting-bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 5px 20px;
+  border-bottom: #2F3336 1px solid;
+}
+.add-img-emoji-calendar {
+  display: flex;
+}
+.tweeting-bottom button {
+  padding: 10px;
+  border-radius: 13px;
+}
+
+.add-img-emoji-calendar li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add-img-emoji-calendar li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.add-photo-label,
+.add-img-emoji-calendar li button,
+.add-img-emoji-calendar li label {
+  background: none;
+  border: none;
+  color: #1A91DA;
+}
+
+.add-img-emoji-calendar li label {
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.right-menu {
+  background: black;
+}
+
+.right-menu .right-menu-search {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.right-menu .right-menu-search input {
+  width: 100%;
+  position: relative;
+  margin-top: 5px;
+  background: #202327;
+  border-radius: 13px;
+  padding: 15px 36px 15px 15px;
+  color: #1A91DA;
+  border: 1px solid transparent;
+}
+
+.right-menu .right-menu-search input:focus {
+  transition: 200ms all;
+  border: 1px solid #1A91DA;
+}
+
+.right-menu .right-menu-search a {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  padding: 0 15px 0 5px;
+  height: 100%;
+  right: 0;
+  color: #1DA1F2;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+
+.right-menu .right-menu-search a:hover {
+  transition: 200ms all;
+  color: rgb(26, 145, 218);
+}
+
+.trends {
+  margin-bottom: 15px;
+}
+
+.trends-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: #202327;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+}
+
+.trends-header a {
+  color: #1DA1F2;
+}
+
+.trends-header a:hover {
+  transition: 200ms all;
+  color: rgb(26, 145, 218);
+}
+
+.trends ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #202327;
+}
+
+.trends-more {
+  display: flex;
+  align-items: center;
+  background: #202327;
+  border-top: 1px solid #2F3336;
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+
+.trends-more button {
+  background: transparent;
+  border: none;
+  padding: 15px !important;
+  color: #1DA1F2;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+
+.trends-more button:hover {
+  transition: 200ms all;
+  background: #1C1F23;
+  border: none;
+  color: rgb(26, 145, 218);
+}
+
+.who-to-follow .who-to-follow-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: #202327;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+}
+
+.who-to-follow-suggestion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #202327;
+  border-top: 1px solid #2F3336;
+  width: 100%;
+  transition: 200ms all;   
+  padding: 15px;
+}
+
+.who-to-follow-suggestion:hover {
+  background: #1C1F23;
+}
+
+.who-to-follow-suggestion a {
+  display: flex;
+  align-items: center;
+  color: #ddd;
+}
+
+.who-to-follow-suggestion .suggestion h3:last-of-type{
+  color: #6E767D;
+}
+
+.who-to-follow-suggestion img {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.btn-follow {
+  background: transparent;
+  border: 1px solid #1DA1F2;
+  color: #1DA1F2;
+  padding: 10px;
+  border-radius: 13px;
+}
+
+.btn-follow:hover {
+  transition: 200ms all;
+  background: #1da0f248;
+}
+
+/*oneTweet*/
+
+.one-tweet {
+  border-bottom: 1px solid #2F3336;
+  transition: 200ms;
+  padding: 15px;
+}
+.one-tweet:hover {
+  background: #080808;
+}
+.interaction {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+.messages,
+.retweet,
+.like{
+  transition: 200ms all;
+  color: rgba(255, 255, 255, 0.267);
+}
+.messages:hover,
+.retweet:hover,
+.like:hover{
+  color: #1DA1F2;
+}
+
+
+.user-name {
+  font-weight: 900;
+}
+.user-nameAnduser-tag {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+.user-tag {
+  color: rgba(255, 255, 255, 0.267);
+  margin-left: 20px;
+}
+.tweet-content {
+  margin-bottom: 2%;
+}
+
+
+
+
+/*SINGLE TREND*/
+
+.single-trend {
+  border-top: 1px solid #2F3336;
+  width: 100%;
+  transition: 200ms all;
+}
+
+.single-trend:hover {
+  background: #1C1F23;
+}
+
+.single-trend a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+  color: #fff;
+}
+
+.single-trend .trend-type {
+  padding-bottom: 5px;
+  color: rgba(255, 255, 255, 0.267);
+}
+
+.number-of-trend {
+  padding-top: 5px;
+  color: rgba(255, 255, 255, 0.267);
+  font-size: 14px;
+}
+
+/*PORFİLE_INFO*/
+
+.profile-info {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  border-bottom: #2F3336 1px solid;
+}
+
+.profile-info .user-name-tag {
+  margin-top: 10px;
+}
+
+.profile-info .user-name-tag h2 {
+  font-weight: 100;
+}
+
+.profile-info .user-name-tag h3 {
+  font-weight: 100;
+  font-size: 14px;
+  color:rgba(255, 255, 255, 0.336);
+}
+
+.profile-info img {
+  width: 100px;
+  height: 100px;
+  border-radius: 13px;
+}
+
+.following-followers {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  margin-top: 20px;
+}
+.followers-following-text {
+  color: rgba(255, 255, 255, 0.336);
+  font-weight: 100;
+  margin-left: 7px;
+}
+.following,
+.followers {
+  display: flex;
+  padding: 5px 0;
+}
+
+
+.profile-user-tweets-title h2 {
+  text-align: start;
+  font-weight: 200;
+  font-size: 30px;
+  margin: 0 !important;
+  padding: 20px;
+  border-bottom: #2F3336 1px solid;
+}
+
+.one-tweet {
+  position: relative;
+}
+
+.follow-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: rgba(255, 255, 255, 0.336) solid 1px;
+}
